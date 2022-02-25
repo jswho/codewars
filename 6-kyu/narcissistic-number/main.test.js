@@ -7,3 +7,7 @@ test('a single digit', () => {
 test('a double digit is not a narcissistic number', () => {
   expect(narcissistic(52)).toBe(false);
 });
+
+test('a tripe digit number is a narcissistic number', () => {
+  expect(narcissistic(153)).toBe(true);
+});
