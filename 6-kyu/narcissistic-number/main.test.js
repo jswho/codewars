@@ -1,5 +1,5 @@
 const narcissistic = require('./main');
 
-test('Test case, returns true', () => {
-  expect(narcissistic(3)).toBe(true);
+test('a single digit', () => {
+  expect(narcissistic(1)).toBe(true);
 });
