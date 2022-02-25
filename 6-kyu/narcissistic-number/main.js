@@ -14,7 +14,12 @@ Your code must return true or false depending upon whether the given number is a
 */
 
 const narcissistic = (number) => {
-  return true;
+  const toSplitString = number.toString().split('');
+
+  return toSplitString.reduce((sum, currentNumber) => {
+    sum += Math.pow(parseInt(currentNumber, 10), toSplitString.length);
+    return sum === number;
+  }, 0);
 };
 
 module.exports = narcissistic;
