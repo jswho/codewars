@@ -16,10 +16,11 @@ Your code must return true or false depending upon whether the given number is a
 const narcissistic = (number) => {
   const toSplitString = number.toString().split('');
 
-  return toSplitString.reduce((sum, currentNumber) => {
-    sum += Math.pow(parseInt(currentNumber, 10), toSplitString.length);
-    return sum === number;
+  const result = toSplitString.reduce((sum, currentNumber) => {
+    return (sum += Math.pow(parseInt(currentNumber, 10), toSplitString.length));
   }, 0);
+
+  return result === number;
 };
 
 module.exports = narcissistic;
