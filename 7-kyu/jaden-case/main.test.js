@@ -1,0 +1,1 @@
+const toJadenCase = require('./main');
