@@ -12,7 +12,18 @@ Should return: 160 (the only even number)
 */
 
 const findOutlier = (integers) => {
-  return 2;
+  const even = [];
+  const odd = [];
+
+  for (integer of integers) {
+    if (integer % 2 === 0) {
+      even.push(integer);
+    } else {
+      odd.push(integer);
+    }
+  }
+
+  return even.length > 1 ? odd[0] : even[0];
 };
 
 module.exports = findOutlier;
