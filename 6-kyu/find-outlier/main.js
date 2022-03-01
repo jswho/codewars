@@ -11,6 +11,8 @@ Should return: 11 (the only odd number)
 Should return: 160 (the only even number)
 */
 
-const findOutlier = (integers) => {};
+const findOutlier = (integers) => {
+  return 2;
+};
 
 module.exports = findOutlier;
