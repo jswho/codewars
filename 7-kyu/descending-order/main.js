@@ -11,7 +11,16 @@ Input: 123456789 Output: 987654321
 */
 
 const descendingOrder = (number) => {
-  return number;
+  return parseInt(
+    number
+      .toString()
+      .split('')
+      .map((number) => parseInt(number, 10))
+      .sort((a, b) => b - a)
+      .map((number) => number.toString())
+      .join(''),
+    10
+  );
 };
 
 module.exports = descendingOrder;
