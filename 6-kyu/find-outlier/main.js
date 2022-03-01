@@ -12,16 +12,8 @@ Should return: 160 (the only even number)
 */
 
 const findOutlier = (integers) => {
-  const even = [];
-  const odd = [];
-
-  for (integer of integers) {
-    if (integer % 2 === 0) {
-      even.push(integer);
-    } else {
-      odd.push(integer);
-    }
-  }
+  const even = integers.filter((integer) => integer % 2 === 0);
+  const odd = integers.filter((integer) => integer % 2 === 1);
 
   return even.length > 1 ? odd[0] : even[0];
 };
