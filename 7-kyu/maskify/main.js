@@ -15,7 +15,13 @@ maskify("Skippy") == "##ippy"
 */
 
 const maskify = (string) => {
-  return string;
+  let masked = '';
+
+  for (let index = 0; index <= string.length - 5; index++) {
+    masked += '#';
+  }
+
+  return masked + string.substring(string.length - 4);
 };
 
 module.exports = maskify;
