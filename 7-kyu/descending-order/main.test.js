@@ -11,3 +11,7 @@ test('a double digit number', () => {
 test('a triple digit number', () => {
   expect(descendingOrder(136)).toBe(631);
 });
+
+test('a large number', () => {
+  expect(descendingOrder(123456789)).toBe(987654321);
+});
