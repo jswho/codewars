@@ -18,3 +18,10 @@ test('multiple names of different lengths', () => {
     'Mark',
   ]);
 });
+
+test('that all correct names return in the same order', () => {
+  expect(friend(['A', 'B', 'John', 'Jodie', 'Suzi'])).toStrictEqual([
+    'John',
+    'Suzi',
+  ]);
+});
