@@ -7,3 +7,7 @@ test('a single name of length 4', () => {
 test('a name less than 4 characters', () => {
   expect(friend(['Kim'])).toStrictEqual([]);
 });
+
+test('a name more than 4 characters', () => {
+  expect(friend(['Oliver'])).toStrictEqual([]);
+});
