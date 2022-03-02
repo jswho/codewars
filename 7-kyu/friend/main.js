@@ -1,3 +1,5 @@
-const friend = (names) => {};
+const friend = (names) => {
+  return names;
+};
 
 module.exports = friend;
