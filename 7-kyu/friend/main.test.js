@@ -11,3 +11,10 @@ test('a name less than 4 characters', () => {
 test('a name more than 4 characters', () => {
   expect(friend(['Oliver'])).toStrictEqual([]);
 });
+
+test('multiple names of different lengths', () => {
+  expect(friend(['Ryan', 'Kieran', 'Mark', 'Kim'])).toStrictEqual([
+    'Ryan',
+    'Mark',
+  ]);
+});
