@@ -10,6 +10,8 @@ Please keep in mind that the test cases ensure that the number of people in the 
 The second value in the first integer array is 0, since the bus is empty in the first bus stop.
 */
 
-const number = (busStops) => {};
+const number = (busStops) => {
+  return 0;
+};
 
 module.exports = number;
