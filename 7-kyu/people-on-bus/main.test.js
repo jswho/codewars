@@ -12,3 +12,31 @@ test('for two bus stops, with 3 people coming on and 1 off', () => {
     ])
   ).toBe(2);
 });
+
+test('multiple bus stops', () => {
+  const testCases = [
+    {
+      busJourney: [
+        [10, 0],
+        [3, 5],
+        [5, 8],
+      ],
+      peopleStillOnBus: 5,
+    },
+    {
+      busJourney: [
+        [3, 0],
+        [9, 1],
+        [4, 8],
+        [12, 2],
+        [6, 1],
+        [7, 8],
+      ],
+      peopleStillOnBus: 21,
+    },
+  ];
+
+  testCases.forEach((test) => {
+    expect(number(test.busJourney)).toBe(test.peopleStillOnBus);
+  });
+});
