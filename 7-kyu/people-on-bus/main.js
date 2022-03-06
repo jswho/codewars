@@ -11,7 +11,12 @@ The second value in the first integer array is 0, since the bus is empty in the 
 */
 
 const number = (busStops) => {
-  return 0;
+  let peopleOnBus = 0;
+
+  busStops.forEach((busStop) => {
+    peopleOnBus += busStop.reduce((onBus, offBus) => onBus - offBus);
+  });
+  return peopleOnBus;
 };
 
 module.exports = number;
