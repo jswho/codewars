@@ -1,5 +1,5 @@
 const anagrams = require('./main');
 
-test('', () => {
-  expect(anagrams()).toBe();
+test('a word that is not an anagram', () => {
+  expect(anagrams('laser', ['lazy'])).toStrictEqual([]);
 });

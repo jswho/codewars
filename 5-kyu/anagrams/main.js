@@ -10,6 +10,8 @@ anagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']) => ['carer', '
 anagrams('laser', ['lazing', 'lazy',  'lacer']) => []
 */
 
-const anagrams = (word, words) => {};
+const anagrams = (word, words) => {
+  return [];
+};
 
 module.exports = anagrams;
