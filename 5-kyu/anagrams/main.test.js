@@ -14,3 +14,9 @@ test('multiple words', () => {
     'bbaa',
   ]);
 });
+
+test('codewars sample tests that fail', () => {
+  expect(
+    anagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer'])
+  ).toStrictEqual(['carer', 'racer']);
+});
