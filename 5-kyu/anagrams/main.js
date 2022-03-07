@@ -11,7 +11,20 @@ anagrams('laser', ['lazing', 'lazy',  'lacer']) => []
 */
 
 const anagrams = (word, words) => {
-  return [];
+  letterCountForWord(word);
+};
+
+const letterCountForWord = (word) => {
+  const letterCount = {};
+
+  for (letter of word) {
+    if (!!letterCount[letter]) {
+      letterCount[letter]++;
+    } else {
+      letterCount[letter] = 1;
+    }
+  }
+  return letterCount;
 };
 
 module.exports = anagrams;
