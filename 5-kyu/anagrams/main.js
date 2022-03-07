@@ -10,8 +10,26 @@ anagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']) => ['carer', '
 anagrams('laser', ['lazing', 'lazy',  'lacer']) => []
 */
 
-const anagrams = (word, words) => {
-  letterCountForWord(word);
+const anagrams = (word, list) => {
+  const mainWordCount = letterCountForWord(word);
+
+  return list.filter((wordInList) => {
+    let wordInListCount = letterCountForWord(wordInList);
+
+    return isAnagram(mainWordCount, wordInList);
+  });
+};
+
+const isAnagram = (wordCount1, wordInList) => {
+  let spellWord = '';
+
+  for (letter of wordInList) {
+    if (!!wordCount1[letter]) {
+      spellWord += letter;
+    }
+  }
+
+  return spellWord === wordInList;
 };
 
 const letterCountForWord = (word) => {
