@@ -11,38 +11,20 @@ anagrams('laser', ['lazing', 'lazy',  'lacer']) => []
 */
 
 const anagrams = (word, list) => {
-  const mainWordCount = letterCountForWord(word);
+  const orderedWord = word.split('').sort().join('');
+  const orderedList = list.map((wordInList) =>
+    wordInList.split('').sort().join('')
+  );
 
-  return list.filter((wordInList) => {
-    let wordInListCount = letterCountForWord(wordInList);
+  const result = [];
 
-    return isAnagram(mainWordCount, wordInList);
+  orderedList.forEach((wordInList, index) => {
+    if (wordInList === orderedWord) {
+      result.push(list[index]);
+    }
   });
-};
 
-const isAnagram = (wordCount1, wordInList) => {
-  let spellWord = '';
-
-  for (letter of wordInList) {
-    if (!!wordCount1[letter]) {
-      spellWord += letter;
-    }
-  }
-
-  return spellWord === wordInList;
-};
-
-const letterCountForWord = (word) => {
-  const letterCount = {};
-
-  for (letter of word) {
-    if (!!letterCount[letter]) {
-      letterCount[letter]++;
-    } else {
-      letterCount[letter] = 1;
-    }
-  }
-  return letterCount;
+  return result;
 };
 
 module.exports = anagrams;
