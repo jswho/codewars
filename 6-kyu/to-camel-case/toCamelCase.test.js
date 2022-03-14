@@ -1,5 +1,5 @@
 const toCamelCase = require('./toCamelCase');
 
-test('', () => {
-  expect(toCamelCase()).toBe();
+test('an empty string', () => {
+  expect(toCamelCase('')).toBe('');
 });

@@ -7,6 +7,8 @@ Examples
 "The_Stealth_Warrior" gets converted to "TheStealthWarrior"
 */
 
-const toCamelCase = () => {};
+const toCamelCase = (string) => {
+  return '';
+};
 
 module.exports = toCamelCase;
