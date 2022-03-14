@@ -45,3 +45,7 @@ test('multiple words that start with an uppercase letter that are delimited with
     expect(toCamelCase(test.input)).toBe(test.camelCased);
   });
 });
+
+test('all capital letters', () => {
+  expect(toCamelCase('A-B-C')).toBe('ABC');
+});
