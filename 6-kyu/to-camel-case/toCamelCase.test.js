@@ -7,3 +7,7 @@ test('an empty string', () => {
 test('a word that starts with an uppercase letter', () => {
   expect(toCamelCase('The')).toBe('The');
 });
+
+test('a word that starts with a lowercase letter', () => {
+  expect(toCamelCase('is')).toBe('is');
+});
