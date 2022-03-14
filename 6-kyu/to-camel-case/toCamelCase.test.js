@@ -11,3 +11,7 @@ test('a word that starts with an uppercase letter', () => {
 test('a word that starts with a lowercase letter', () => {
   expect(toCamelCase('is')).toBe('is');
 });
+
+test('multiple words with a "-" delimeter', () => {
+  expect(toCamelCase('the-stealth-warrior')).toBe('theStealthWarrior');
+});

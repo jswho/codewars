@@ -8,7 +8,17 @@ Examples
 */
 
 const toCamelCase = (string) => {
-  return string;
+  const regex = /-|_/;
+
+  const delimited = string.split(regex);
+
+  return delimited.reduce((camelCase, word, index) => {
+    if (index == 0) {
+      return (camelCase += word);
+    } else {
+      return (camelCase += `${word[0].toUpperCase()}${word.substring(1)}`);
+    }
+  }, '');
 };
 
 module.exports = toCamelCase;
