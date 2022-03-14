@@ -10,7 +10,7 @@ Examples
 const toCamelCase = (string) => {
   const regex = /-|_/;
 
-  const delimited = string.split(regex);
+  const delimited = string.split(regex).filter((word) => !!word);
 
   return delimited.reduce((camelCase, word, index) => {
     if (index == 0) {
