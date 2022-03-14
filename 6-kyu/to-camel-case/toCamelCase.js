@@ -8,7 +8,7 @@ Examples
 */
 
 const toCamelCase = (string) => {
-  return '';
+  return string;
 };
 
 module.exports = toCamelCase;
