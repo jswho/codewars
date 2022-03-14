@@ -28,3 +28,20 @@ test('multiple words that are delimited with either an "-" or "_"', () => {
     expect(toCamelCase(test.input)).toBe(test.camelCased);
   });
 });
+
+test('multiple words that start with an uppercase letter that are delimited with either an "-" or "_"', () => {
+  const testCases = [
+    {
+      input: 'Visual-studio-code',
+      camelCased: 'VisualStudioCode',
+    },
+    {
+      input: 'Learning_To_code_using_javascript',
+      camelCased: 'LearningToCodeUsingJavascript',
+    },
+  ];
+
+  testCases.forEach((test) => {
+    expect(toCamelCase(test.input)).toBe(test.camelCased);
+  });
+});
